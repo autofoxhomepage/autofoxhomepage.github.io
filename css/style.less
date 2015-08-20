@@ -1,0 +1,378 @@
+/* Autofox stylesheet */
+
+// LESS color definitions
+
+@backgroundColor: #ebebeb;
+@headerColor: #131d27;
+@navTextColor: #fff;
+@secondBackgroundColor: #f79625; // services section
+@thirdBackgroundColor: #666666; // testimonial;
+@fourthBackgroundColor: #ffffff;
+@h3Color: #363636;
+@h3ColorInverse: #ffffff;
+
+@debugColor: #E97272;
+
+// font
+
+@font-face{
+    font-family: "Gotham-Book";
+    src: url('../assets/font/GothamBook.ttf'),
+    url('../assets/font/GothamBook.ttf'); /* IE */
+}
+
+// General tags
+
+html, body{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: @backgroundColor;
+
+}
+
+// > Header
+
+header{
+	height: 100vh;
+}
+
+section{
+	display: block;
+	padding: 50px 0;
+}
+
+section .container .row h3{
+	font-family: "Gotham-Book", Sans;
+	font-size: 4em;
+	font-weight: bolder;
+	text-transform: uppercase;
+	margin-top: 0;
+	color: @h3Color;
+
+	span{
+		display: block;
+		border-bottom: 9px @h3Color solid;
+	}
+}
+section .container .row .inverse{
+	color: @h3ColorInverse;
+}
+
+section .container .row .inverse span{
+	border-bottom: 9px @h3ColorInverse solid;
+}
+
+// typography
+
+.emphasis{
+	color: @secondBackgroundColor;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+// # Top nav
+
+header nav, .navbar{
+	min-height: 10vh;
+	background-color: @headerColor;
+	margin: 0;
+	padding: 0;
+	border-radius: 0px;
+
+	.container{
+		margin-top: 3vh;
+
+		.navbar-header .navbar-brand{
+			padding: 0;
+
+			img{
+				margin-left: 15px;
+			}
+		}
+
+		.navbar-header button{
+			background-color: lighten(@secondBackgroundColor, 10%);
+			border: 2px @secondBackgroundColor solid;
+			margin-top: 0;
+
+			.icon-bar{
+				background-color: lighten(@secondBackgroundColor, 50%);
+			}
+		}
+
+		.navbar-collapse{
+			background-color: @headerColor;
+			z-index: 10000;
+		}
+
+		.navbar-collapse .navbar-nav li a{
+			padding: 0;
+			padding-top: 4px;
+			margin-left: 20px;
+			color: @navTextColor;
+			text-transform: uppercase;
+			font-weight: 500;
+			font-size: 1.2em;
+
+			-o-transition:.5s;
+			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+			transition:.5s;
+		}
+
+		.navbar-collapse .navbar-nav li a:hover{
+			background-color: @headerColor;
+			color: darken(@navTextColor, 10%);
+			text-decoration: none;
+		}
+
+		.navbar-collapse .navbar-nav li a:visited{
+			background-color: @headerColor;
+		}
+	}
+}
+
+.navbar-default{
+	background-color: @headerColor; 
+}
+
+.logo{
+	margin: 3.3vh 0;
+}
+
+// # Jumbotron
+
+.jumbotron{
+	height: 100vh;
+	font-family: "Gotham-Book", Sans;
+	background-image: url("../assets/images/jumbotron-background.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+	color: @navTextColor;
+
+	.jumbotron-padding{
+		height: 20vh;
+	}
+
+	.container .row .col-md-12{
+		.title{
+			font-size: 2.9em;
+		}
+
+		.subtitle{
+			font-size: 20px;
+			color: @secondBackgroundColor;
+		}
+	
+		.first{
+			margin-right: 20px;
+		}
+
+		.telephone{
+			font-size: 3.5rem;
+			color: @navTextColor; 
+		}
+
+		.telephone:hover, .telephone:active, .telephone:visited{
+			text-decoration: none;
+		}
+	}
+}
+
+// Our services
+
+.services{
+	background-color: @secondBackgroundColor;
+	color: @navTextColor;
+
+	h3{
+		margin-bottom: 50px;
+	}
+
+	.service-element .row{
+		.col-md-8 h5{
+			font-family: "Gotham-Book", Sans;
+			text-transform: uppercase;
+			font-size: 14pt;
+			margin-top: 0;
+		}
+	}
+
+	.service-element-break{
+		height: 50px;
+	}
+}
+
+
+// How it works?
+
+.how-it-works{
+	background-color: @backgroundColor;
+
+	.container .row .lead{
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.tile{
+		display: block;
+		min-width: 300px;
+		min-height: 300px;
+		max-width: 350px;
+		max-height: 350px;
+		margin: auto;
+		margin-bottom: 50px;
+		background-color: #ccc;
+	}
+}
+
+// Testimonial
+
+.testimonial{
+	background-color: @thirdBackgroundColor;
+}
+
+// Our company
+
+.our-company{
+	background-color: @fourthBackgroundColor;
+}
+
+// Our team
+
+.our-team{
+	min-height: 100vh;
+	background-color: @backgroundColor;
+
+	.our-team-container{
+
+		margin-top: 50px;
+
+		.bio{
+			margin-top: 50px;
+		}
+	}
+}
+
+// contact form
+
+.contact-us{
+	min-height: 100vh;
+	background-image: url("../assets/images/contact-form-background.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+	color: @navTextColor;
+
+}
+
+// footer
+
+footer{
+	box-sizing: border-box;
+	min-height: 20vh;
+	padding-top: 30px;
+	background-color: @headerColor;
+	color: @navTextColor;
+
+	p small{
+		color: darken(@navTextColor, 50%);
+	}
+}
+
+// > UI elements
+
+// # buttons
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+.btn-xl {
+    padding: 18px 28px;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.btn-primary-normal{
+	background-color: @navTextColor;
+	color: @secondBackgroundColor;
+}
+
+.btn-primary-normal:hover, .btn-primary-normal:active, .btn-primary-normal:visited{
+	background-color: darken(@navTextColor, 10%);
+	color: @secondBackgroundColor;
+}
+
+.btn-primary-negative{
+	background-color: @secondBackgroundColor;
+	color: @navTextColor;
+}
+
+.btn-primary-negative:hover, .btn-primary-negative:active, .btn-primary-negative:visited{
+	background-color: darken(@secondBackgroundColor, 10%);
+	color: @navTextColor;
+}
+
+// inputs
+
+.form-control, .btn-form-control{
+	opacity: 0.5;
+	border-radius: 0;
+	border: 0px solid #fff;
+
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+.form-control:hover, .btn-form-control:hover{
+	opacity: 0.8;
+}
+
+// helpers
+
+.avatar{
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	background-color: @navTextColor;
+	margin: auto;
+}
+
+// responsive util
+
+@media (max-width: 992px) {
+  	.btn-primary-normal {
+   		margin-bottom: 5px;
+  	}
+}
