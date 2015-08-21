@@ -13,21 +13,25 @@ $(document).ready(function() {
     	e.preventDefault();
   	});
 
-    $( '#contact-form-submit' ).on( 'submit', function(e) {
+    $( '#contact-form-submit' ).on('click', function(e) {
 	    e.preventDefault();
-	    alert("sending email");
 	    var email = $('#InputEmail').val();
 		var name = $('#InputName').val();
 		var telephone = $('#InputTelephone').val();
 		var postalCode = $('#InputPostalCode').val();
-		alert(email+' '+name+' '+telephone+' '+postalCode);
-	    // $.ajax({
-	    //     type: "POST",
-	    //     url: host+'/mail/',
-	    //     data: {email:email, name:name, telephone:telephone, postalCode: postalCode}
-	    //     success: function() {
-	    //     alert( "ok" );
-	    //     }
-	    // });
+	    $.ajax({
+	        type: "POST",
+	        url: '/mail/',
+	        data: {email:email, name:name, telephone:telephone, postalCode: postalCode},
+	        beforeSend: function() {
+                $('#contact-form-submit').html('<i class="fa fa-circle-o-notch fa-spin"></i>');
+            },
+	        success: function(e) {
+	        	$('#contact-form-submit').html('<i class="fa fa-check"></i> Send');
+	        },
+	        error: function(e){
+				$('#contact-form-submit').html('<i class="fa fa-close"></i> Try again');
+	        }
+	    });
 	});
 });
