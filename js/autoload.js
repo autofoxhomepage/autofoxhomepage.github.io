@@ -21,13 +21,13 @@ $(document).ready(function() {
 		var telephone = $('#InputTelephone').val();
 		var postalCode = $('#InputPostalCode').val();
 		alert(email+' '+name+' '+telephone+' '+postalCode);
-	    $.ajax({
-	        type: "POST",
-	        url: host+'/mail/',
-	        data: {email:email, name:name, telephone:telephone, postalCode: postalCode}
-	        success: function() {
-	        alert( "ok" );
-	        }
-	    });
+	    // $.ajax({
+	    //     type: "POST",
+	    //     url: host+'/mail/',
+	    //     data: {email:email, name:name, telephone:telephone, postalCode: postalCode}
+	    //     success: function() {
+	    //     alert( "ok" );
+	    //     }
+	    // });
 	});
 });
