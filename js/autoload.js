@@ -14,6 +14,11 @@ $(document).ready(function() {
   	});
 
     $( '#contact-form-submit' ).on('click', function(e) {
+
+    	if(!$("#contact-form")[0].checkValidity()){
+			$myForm.find(':submit').click();
+    	}
+
 	    e.preventDefault();
 	    var email = $('#InputEmail').val();
 		var name = $('#InputName').val();
@@ -28,9 +33,13 @@ $(document).ready(function() {
             },
 	        success: function(e) {
 	        	$('#contact-form-submit').html('<i class="fa fa-check"></i> Send');
+	        	$("#contactFormModal .modal-body p").html("Thank you for your service request. You will be contacted shortly to schedule a service visit.");
+	        	$('#contactFormModal').modal('show');
 	        },
 	        error: function(e){
 				$('#contact-form-submit').html('<i class="fa fa-close"></i> Try again');
+				$("#contactFormModal .modal-body p").html("Thank you for your service request. You will be contacted shortly to schedule a service visit.");
+				$('#contactFormModal').modal('show');
 	        }
 	    });
 	});
