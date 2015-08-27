@@ -147,7 +147,7 @@ header nav, .navbar{
 // # Jumbotron
 
 .jumbotron{
-	height: 90vh;
+	// height: 90vh;
 	font-family: "Gotham-Book", Sans;
 	background-image: url("../assets/images/jumbotron-background.jpg");
 	background-size: cover;
@@ -221,6 +221,7 @@ header nav, .navbar{
 	}
 
 	.tile{
+		box-sizing: border-box;
 		display: block;
 		min-width: 300px;
 		min-height: 300px;
@@ -228,7 +229,15 @@ header nav, .navbar{
 		max-height: 350px;
 		margin: auto;
 		margin-bottom: 50px;
+
+		padding: 10%;
 		background-color: #ccc;
+
+		color: @backgroundColor;
+		font-weight: 700;
+		font-size: 20px;
+		text-align: justify;
+    	text-justify: inter-word;
 	}
 }
 
