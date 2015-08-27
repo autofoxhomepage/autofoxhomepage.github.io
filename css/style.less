@@ -36,7 +36,7 @@ body{
 // > Header
 
 header{
-	height: 100vh;
+	min-height: 100vh;
 }
 
 section{
@@ -147,13 +147,14 @@ header nav, .navbar{
 // # Jumbotron
 
 .jumbotron{
-	height: 100vh;
+	height: 90vh;
 	font-family: "Gotham-Book", Sans;
 	background-image: url("../assets/images/jumbotron-background.jpg");
 	background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 	color: @navTextColor;
+	margin-bottom: 0px;
 
 	.jumbotron-padding{
 		height: 20vh;
@@ -262,7 +263,7 @@ header nav, .navbar{
 // contact form
 
 .contact-us{
-	min-height: 100vh;
+	// min-height: 100vh;
 	background-image: url("../assets/images/contact-form-background.jpg");
 	background-size: cover;
     background-repeat: no-repeat;
