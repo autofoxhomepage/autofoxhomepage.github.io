@@ -21,6 +21,12 @@
     url('../assets/font/GothamBook.ttf'); /* IE */
 }
 
+@font-face{
+    font-family: "Gotham-Bold";
+    src: url('../assets/font/GothamBold.ttf'),
+    url('../assets/font/GothamBold.ttf'); /* IE */
+}
+
 // General tags
 
 html, body{
@@ -45,7 +51,7 @@ section{
 }
 
 section .container .row h3{
-	font-family: "Gotham-Book", Helvetica, sans-serif;
+	font-family: "Gotham-Bold", Helvetica, sans-serif;
 	font-size: 4em;
 	font-weight: bolder;
 	text-transform: uppercase;
@@ -198,10 +204,16 @@ header nav, .navbar{
 
 	.service-element .row{
 		.col-md-8 h5{
-			font-family: "Gotham-Book", Helvetica, sans-serif;
+			font-family: "Gotham-Bold", Helvetica, sans-serif;
 			text-transform: uppercase;
-			font-size: 14pt;
-			margin-top: 0;
+			font-weight: 900;
+			font-size: 1em;
+		}
+
+		p{
+			font-family: "Gotham-Book", Helvetica, sans-serif;
+			font-weight: normal;
+			font-size: 0.9em;
 		}
 	}
 
@@ -215,30 +227,31 @@ header nav, .navbar{
 
 .how-it-works{
 	background-color: @backgroundColor;
+	color: @h3Color;
 
-	.container .row .lead{
-		margin-top: 50px;
+	h3{
+		color: @h3ColorInverse;
 		margin-bottom: 50px;
 	}
 
-	.tile{
-		box-sizing: border-box;
-		display: block;
-		min-width: 300px;
-		min-height: 300px;
-		max-width: 350px;
-		max-height: 350px;
-		margin: auto;
-		margin-bottom: 50px;
+	.service-element .row{
+		margin-top: 20px;
+		.col-md-8 h5{
+			font-family: "Gotham-Bold", Helvetica, sans-serif;
+			text-transform: uppercase;
+			font-weight: 900;
+			font-size: 1em;
+		}
 
-		padding: 10%;
-		background-color: #ccc;
+		p{
+			font-family: "Gotham-Book", Helvetica, sans-serif;
+			font-weight: normal;
+			font-size: 0.9em;
+		}
+	}
 
-		color: @backgroundColor;
-		font-weight: 700;
-		font-size: 20px;
-		text-align: justify;
-    	text-justify: inter-word;
+	.service-element-break{
+		height: 50px;
 	}
 }
 
