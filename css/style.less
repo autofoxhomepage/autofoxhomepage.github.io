@@ -168,6 +168,8 @@ header nav, .navbar{
 
 	.container .row .col-md-12{
 		.title{
+			font-family: "Gotham-Bold", Helvetica, sans-serif;
+			font-weight: 100;
 			font-size: 2.9em;
 		}
 
@@ -181,6 +183,7 @@ header nav, .navbar{
 		}
 
 		.telephone{
+			font-family: "Gotham-Bold", Helvetica, sans-serif;
 			font-size: 3.5rem;
 			color: @navTextColor; 
 		}
@@ -352,7 +355,7 @@ footer{
 	color: @secondBackgroundColor;
 }
 
-.btn-primary-normal:hover, .btn-primary-normal:active, .btn-primary-normal:visited{
+.btn-primary-normal:hover, .btn-primary-normal:focus{
 	background-color: darken(@navTextColor, 10%);
 	color: @secondBackgroundColor;
 }
@@ -362,7 +365,7 @@ footer{
 	color: @navTextColor;
 }
 
-.btn-primary-negative:hover, .btn-primary-negative:active, .btn-primary-negative:visited{
+.btn-primary-negative:hover, .btn-primary-negative:focus{
 	background-color: darken(@secondBackgroundColor, 10%);
 	color: @navTextColor;
 }
