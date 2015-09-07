@@ -15,17 +15,17 @@
 
 // font
 
-@font-face{
-    font-family: "Gotham-Book";
-    src: url('../assets/font/GothamBook.ttf') format('truetype'),
-    url('../assets/font/GothamBook.ttf') format('truetype'); /* IE */
-}
+// @font-face{
+//     font-family: "Gotham-Book";
+//     src: url('../assets/font/GothamBook.ttf') format('truetype'),
+//     url('../assets/font/GothamBook.ttf') format('truetype'); /* IE */
+// }
 
-@font-face{
-    font-family: "Gotham-Bold";
-    src: url('../assets/font/GothamBold.ttf') format('truetype'),
-    url('../assets/font/GothamBold.ttf') format('truetype'); /* IE */
-}
+// @font-face{
+//     font-family: "Gotham-Bold";
+//     src: url('../assets/font/GothamBold.ttf') format('truetype'),
+//     url('../assets/font/GothamBold.ttf') format('truetype'); /* IE */
+// }
 
 // General tags
 
@@ -65,25 +65,26 @@ section{
 }
 
 section .container .row h3{
+	box-sizing: border-box;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 4em;
 	font-weight: bolder;
 	text-transform: uppercase;
 	margin-top: 0;
+	margin-bottom: 30px;
 	color: @h3Color;
 
-	// span{
-	// 	display: block;
-	// 	border-bottom: 9px @h3Color solid;
-	// }
+	span{
+		border-bottom: 9px @h3Color solid;
+	}
 }
 section .container .row .inverse{
 	color: @h3ColorInverse;
 }
 
-// section .container .row .inverse span{
-// 	border-bottom: 9px @h3ColorInverse solid;
-// }
+section .container .row .inverse span{
+	border-bottom: 9px @h3ColorInverse solid;
+}
 
 // typography
 
@@ -130,6 +131,7 @@ header nav, .navbar{
 		}
 
 		.navbar-collapse .navbar-nav li a{
+			font-family: 'Montserrat', sans-serif;
 			padding: 0;
 			padding-top: 4px;
 			margin-left: 20px;
@@ -151,7 +153,7 @@ header nav, .navbar{
 			text-decoration: none;
 		}
 
-		.navbar-collapse .navbar-nav li a:visited{
+		.navbar-collapse .navbar-nav li a:focus{
 			background-color: @headerColor;
 		}
 	}
@@ -223,11 +225,11 @@ header nav, .navbar{
 		.col-md-8 h5{
 			font-family: 'Montserrat', sans-serif;
 			text-transform: uppercase;
-			font-size: 1em;
+			font-size: 18px;
 		}
 
 		p{
-			font-family: 'Montserrat', sans-serif;
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			font-weight: normal;
 			font-size: 0.9em;
 		}
@@ -255,11 +257,11 @@ header nav, .navbar{
 		.col-md-8 h5{
 			font-family: 'Montserrat', sans-serif;
 			text-transform: uppercase;
-			font-size: 1em;
+			font-size: 18px;
 		}
 
 		p{
-			font-family: 'Montserrat', sans-serif;
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			font-weight: normal;
 			font-size: 0.9em;
 		}
@@ -275,9 +277,10 @@ header nav, .navbar{
 .testimonial{
 	background-color: @thirdBackgroundColor;
 	color: @navTextColor;
+	font-size: 1em;
 
 	.lead{
-		font-size: 16px;
+		font-size: 2.2em;
 	}
 }
 
@@ -366,7 +369,7 @@ footer{
 
 .btn-xl {
     padding: 18px 28px;
-    font-size: 2vh;
+    font-size: 16px;
     border-radius: 8px;
 }
 
