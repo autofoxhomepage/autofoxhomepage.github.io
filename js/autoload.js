@@ -1,6 +1,9 @@
 $(document).ready(function() {
 	
-	$.scrollIt();
+	$.scrollIt({
+  		easing: 'swing',
+  		topOffset: -77
+	});
 
  	$("#testimonial").owlCarousel({
     	items : 1,
