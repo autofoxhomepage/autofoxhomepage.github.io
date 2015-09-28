@@ -23,14 +23,17 @@ $(document).ready(function() {
     	}
 
 	    e.preventDefault();
+	    var token = $('input[name="_token"]').val();
 	    var email = $('#InputEmail').val();
 		var name = $('#InputName').val();
 		var telephone = $('#InputTelephone').val();
 		var postalCode = $('#InputPostalCode').val();
+		var message = $("#InputMessage").val();
+
 	    $.ajax({
 	        type: "POST",
-	        url: '/mail/',
-	        data: {email:email, name:name, telephone:telephone, postalCode: postalCode},
+	        url: '/',
+	        data: {_token:token, email:email, name:name, telephone:telephone, postalCode: postalCode, messageText:message},
 	        beforeSend: function() {
                 $('#contact-form-submit').html('<i class="fa fa-circle-o-notch fa-spin"></i>');
             },
