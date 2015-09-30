@@ -16,6 +16,23 @@ $(document).ready(function() {
     	e.preventDefault();
   	});
 
+	$(window).scroll(function(){
+	    var scrollPos = $(document).scrollTop();
+
+	    if(scrollPos >= 30){
+	    	console.log("> 30");
+	    	$(".logo-big").fadeOut('200', function(){
+	    		$(".logo-small").fadeIn('200');
+	    	});
+
+	    }else{
+	    	$(".logo-small").fadeOut('200', function(){
+	    		$(".logo-big").fadeIn('200');
+	    	});
+	    }
+	    console.log(scrollPos);
+	});
+
     $( '#contact-form-submit' ).on('click', function(e) {
 
     	if(!$("#contact-form")[0].checkValidity()){
