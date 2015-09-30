@@ -19,22 +19,28 @@ $(document).ready(function() {
 	$(window).scroll(function(){
 	    var scrollPos = $(document).scrollTop();
 
-	    if(scrollPos >= 30){
+	    if(scrollPos >= 100){
 
 	    	$(".logo-small").fadeOut('200', function(){
+	    		$(".navbar").animate({height: "6vh"}, 300);
 	    		$(".logo-big").fadeIn('200');
-	    		$(".navbar .container").css("margin-top", 10);
-	    		
-	$(".navbar-brand").css("height", "auto");
+	    		$(".navbar .container").css("margin-top", "15px");
+
+				$(".navbar-brand").css("height", "auto");
 	    		$(".navbar").css("min-height", "6vh");
-	    		$(".navbar").css("height", "6vh");
+	    		
 	    	});
 	    	console.log("> 30");
 	    }else{
 	    	$(".logo-big").fadeOut('200', function(){
+	    		$(".navbar").animate({height: "10vh"}, 400);
+	    		$(".navbar").css("min-height", "10vh");
+	    		// $(".navbar").css("height", "10vh");
 	    		$(".logo-small").fadeIn('200');
-	    		$(".navbar .container").css("margin-top", "3vh");
-	    		$(".navbar").css("height", "10vh");
+	    		$(".navbar .container").css("margin-top", "40px");
+	    		$(".navbar-brand").css("height", "50px");
+	    		
+	    		
 	    	});
 	    }
 	    console.log(scrollPos);
