@@ -20,14 +20,21 @@ $(document).ready(function() {
 	    var scrollPos = $(document).scrollTop();
 
 	    if(scrollPos >= 30){
-	    	console.log("> 30");
-	    	$(".logo-big").fadeOut('200', function(){
-	    		$(".logo-small").fadeIn('200');
-	    	});
 
-	    }else{
 	    	$(".logo-small").fadeOut('200', function(){
 	    		$(".logo-big").fadeIn('200');
+	    		$(".navbar .container").css("margin-top", 10);
+	    		
+	$(".navbar-brand").css("height", "auto");
+	    		$(".navbar").css("min-height", "6vh");
+	    		$(".navbar").css("height", "6vh");
+	    	});
+	    	console.log("> 30");
+	    }else{
+	    	$(".logo-big").fadeOut('200', function(){
+	    		$(".logo-small").fadeIn('200');
+	    		$(".navbar .container").css("margin-top", "3vh");
+	    		$(".navbar").css("height", "10vh");
 	    	});
 	    }
 	    console.log(scrollPos);
