@@ -100,21 +100,39 @@ section .container .row .inverse span{
 
 header nav, .navbar{
 	min-height: 10vh;
+	height: 10vh;
 	background-color: @headerColor;
 	margin: 0;
 	padding: 0;
 	border-radius: 0px;
 
 	.container{
-		margin-top: 3vh;
+		margin-top: 15px;
+
+		.navbar-header{
+			margin-bottom: 10px;
+		}
 
 		.navbar-header .navbar-brand{
 			padding: 0;
 			outline: none;
+			height: auto;
+
+			.logo-big{
+				height: 21px;
+				position: relative;
+			    top: 5px;
+			}
+
+			.logo-small{
+				margin-left: 15px;
+			    height: 52px;
+			    // position: relative;
+			    // top: -5px;
+			}
 
 			img{
 				margin-left: 15px;
-				height: 30px;
 			}
 		}
 

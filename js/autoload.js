@@ -20,28 +20,40 @@ $(document).ready(function() {
 	    var scrollPos = $(document).scrollTop();
 
 	    if(scrollPos >= 100){
+	    	
+	    	
 
-	    	$(".logo-small").fadeOut('200', function(){
-	    		$(".navbar").animate({height: "6vh"}, 300);
-	    		$(".logo-big").fadeIn('200');
-	    		$(".navbar .container").css("margin-top", "15px");
+	    	$(".logo-small").fadeOut('100', function(){ // zmiana na wąski navbar
+	    		$(".logo-big").fadeIn('100'); // pokazanie loga 1 linijkowego
+	    		
+	   			$(".navbar").css("min-height", "8vh");
+	    		$(".navbar").css("height", "8vh");
+	    		// $(".navbar .container").css("margin-top", "15px");
 
-				$(".navbar-brand").css("height", "auto");
-	    		$(".navbar").css("min-height", "6vh");
+				// $(".navbar-brand").css("height", "auto");
+	   
 	    		
 	    	});
-	    	console.log("> 30");
+
+	    	
+			// $(".navbar").animate({height: "6vh"}, 300);
 	    }else{
-	    	$(".logo-big").fadeOut('200', function(){
-	    		$(".navbar").animate({height: "10vh"}, 400);
+	    	
+	    	
+
+	    	$(".logo-big").fadeOut('100', function(){ // zmiana na szeroki navbar
+	    		$(".logo-small").fadeIn('100');	// pokazanie loga 2 linijkowego
+	    		
 	    		$(".navbar").css("min-height", "10vh");
-	    		// $(".navbar").css("height", "10vh");
-	    		$(".logo-small").fadeIn('200');
-	    		$(".navbar .container").css("margin-top", "40px");
-	    		$(".navbar-brand").css("height", "50px");
+	    		$(".navbar").css("height", "10vh");
+	    		// $(".navbar .container").css("margin-top", "15px");
 	    		
-	    		
+	    		// $(".navbar-brand").css("height", "50px");
+	    	
 	    	});
+
+	    	
+			// $(".navbar").animate({height: "10vh"}, 300);
 	    }
 	    console.log(scrollPos);
 	});
