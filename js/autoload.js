@@ -23,8 +23,12 @@ $(document).ready(function() {
 	    	
 	    	
 
-	    	$(".logo-small").fadeOut('100', function(){ // zmiana na wąski navbar
-	    		$(".logo-big").fadeIn('100'); // pokazanie loga 1 linijkowego
+	    	$(".logo-small").fadeOut('50', function(){ // zmiana na wąski navbar
+	    		$(".navbar").addClass('navbar-fixed-top');
+	    		$(".navbar").removeClass("nav-static");
+	    		
+	    		// $(".navbar-ghost").addClass('navbar-ghost-visible');
+	    		$(".logo-big").fadeIn('50'); // pokazanie loga 1 linijkowego
 	    		
 	   			$(".navbar").css("min-height", "64px");
 	    		$(".navbar").css("height", "64px");
@@ -41,8 +45,11 @@ $(document).ready(function() {
 	    	
 	    	
 
-	    	$(".logo-big").fadeOut('100', function(){ // zmiana na szeroki navbar
-	    		$(".logo-small").fadeIn('100');	// pokazanie loga 2 linijkowego
+	    	$(".logo-big").fadeOut('50', function(){ // zmiana na szeroki navbar
+	    		$(".navbar").removeClass('navbar-fixed-top');
+	    		$(".navbar").addClass("nav-static");
+	    		// $(".navbar-ghost").removeClass('navbar-ghost-visible');
+	    		$(".logo-small").fadeIn('50');	// pokazanie loga 2 linijkowego
 	    		
 	    		$(".navbar").css("min-height", "80px");
 	    		$(".navbar").css("height", "80px");
