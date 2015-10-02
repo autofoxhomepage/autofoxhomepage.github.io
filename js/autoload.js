@@ -29,11 +29,10 @@ $(document).ready(function() {
 	   			$(".navbar").css("min-height", "64px");
 	    		$(".navbar").css("height", "64px");
 	    		$(".navbar-right").css("margin-top", "4px");
+	    		$(".navbar-header").css("margin-bottom", "0px");
 	    		// $(".navbar .container").css("margin-top", "15px");
 
 				// $(".navbar-brand").css("height", "auto");
-	   
-	    		
 	    	});
 
 	    	
@@ -48,6 +47,7 @@ $(document).ready(function() {
 	    		$(".navbar").css("min-height", "80px");
 	    		$(".navbar").css("height", "80px");
 	    		$(".navbar-right").css("margin-top", "10px"); 
+	    		$(".navbar-header").css("margin-bottom", "10px");
 	    		// $(".navbar .container").css("margin-top", "15px");
 	    		
 	    		// $(".navbar-brand").css("height", "50px");
