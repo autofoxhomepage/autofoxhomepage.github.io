@@ -28,7 +28,7 @@ $(document).ready(function() {
 	    		$(".navbar").addClass('navbar-fixed-top');
 
 	    		// $(".navbar-ghost").addClass('navbar-ghost-visible');
-	    		$(".logo-big").fadeIn('0'); // pokazanie loga 1 linijkowego
+	    		$(".logo-big").fadeIn(0); // pokazanie loga 1 linijkowego
 	    		
 	   			$(".navbar").css("min-height", "64px");
 	    		$(".navbar").css("height", "64px");
@@ -47,7 +47,7 @@ $(document).ready(function() {
 	    		
 	    		
 	    		// $(".navbar-ghost").removeClass('navbar-ghost-visible');
-	    		$(".logo-small").fadeIn('0');	// pokazanie loga 2 linijkowego
+	    		$(".logo-small").fadeIn(0);	// pokazanie loga 2 linijkowego
 	    		
 	    		$(".navbar").css("min-height", "80px");
 	    		$(".navbar").css("height", "80px");
