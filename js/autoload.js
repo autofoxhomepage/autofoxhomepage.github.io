@@ -26,8 +26,9 @@ $(document).ready(function() {
 	    	$(".logo-small").fadeOut('100', function(){ // zmiana na wąski navbar
 	    		$(".logo-big").fadeIn('100'); // pokazanie loga 1 linijkowego
 	    		
-	   			$(".navbar").css("min-height", "8vh");
-	    		$(".navbar").css("height", "8vh");
+	   			$(".navbar").css("min-height", "64px");
+	    		$(".navbar").css("height", "64px");
+	    		$(".navbar-right").css("margin-top", "4px");
 	    		// $(".navbar .container").css("margin-top", "15px");
 
 				// $(".navbar-brand").css("height", "auto");
@@ -44,8 +45,9 @@ $(document).ready(function() {
 	    	$(".logo-big").fadeOut('100', function(){ // zmiana na szeroki navbar
 	    		$(".logo-small").fadeIn('100');	// pokazanie loga 2 linijkowego
 	    		
-	    		$(".navbar").css("min-height", "10vh");
-	    		$(".navbar").css("height", "10vh");
+	    		$(".navbar").css("min-height", "80px");
+	    		$(".navbar").css("height", "80px");
+	    		$(".navbar-right").css("margin-top", "10px"); 
 	    		// $(".navbar .container").css("margin-top", "15px");
 	    		
 	    		// $(".navbar-brand").css("height", "50px");
