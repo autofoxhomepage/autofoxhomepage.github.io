@@ -16,6 +16,10 @@ $(document).ready(function() {
     	e.preventDefault();
   	});
 
+  	$(".navbar-brand").click(function(event) {
+  		window.location.href = '/';
+  	});
+
 	$(window).scroll(function(){
 	    var scrollPos = $(document).scrollTop();
 
