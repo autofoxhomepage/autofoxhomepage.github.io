@@ -278,7 +278,7 @@
 								<img src="assets/images/hiw_notebook.png" alt="">
 							</div>
 							<div class="col-md-8 col-sm-9">
-								<h5>We put together a quote</h5>
+								<h5>We Put The Quote Together</h5>
 								<p>We prepare a clear and fair price quote for parts & labor with time slots of available mechanics for appointments.</p>
 							</div>
 						</div>
@@ -291,7 +291,7 @@
 								<img src="assets/images/hiw_thumb.png" alt="">
 							</div>
 							<div class="col-md-8 col-sm-9">
-								<h5>You get the service appointment</h5>
+								<h5>You Get The Appointment</h5>
 								<p>We’ll contact you with an appointment for a customer that needs the service you provide, at a time slot that meets your
 availability.</p>
 							</div>
